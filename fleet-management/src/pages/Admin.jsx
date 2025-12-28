@@ -9,7 +9,7 @@ function Admin(){
             <h1>welcome admin</h1>
             <Navbar/>
             <Sidebar/>
-            {/* <div className="container">
+            <div className="container">
                 {
                     formData.map((fleet,index)=>(
                         <div key={fleet.index} className="card">
@@ -21,7 +21,7 @@ function Admin(){
                         </div>
                     ))
                 }
-            </div> */}
+            </div>
         </>
     )
 }
