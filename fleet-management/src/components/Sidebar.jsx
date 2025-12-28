@@ -17,7 +17,7 @@ const Sidebar = () => {
             status,
         }
         formData.push(fleet);
-        localStorage.setItem("fleets",fleet);
+        // localStorage.setItem("fleets",fleet);
         console.log(formData);
         setRegNo("");
         setCategory("");
