@@ -1,11 +1,12 @@
 import React from 'react'
 
 const FleetCard = () => {
+    const fleets=localStorage.getItem(JSON.parse("fleets"));
   return (
     <div>
       <div className="container">
                 {
-                    formData.map((fleet,index)=>(
+                    fleets.map((fleet,index)=>(
                         <div key={fleet.index} className="card">
                             <p>Vehicle Reg No:{fleet.regNo}</p>
                             <p>Category:{fleet.category}</p>
