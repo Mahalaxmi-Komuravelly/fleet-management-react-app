@@ -11,7 +11,7 @@ function Admin(){
             <Sidebar/>
             <div className="container">
                 {
-                    fleets.map((fleet,index)=>(
+                    formData.map((fleet,index)=>(
                         <div key={fleet.index} className="card">
                             <p>Vehicle Reg No:{fleet.regNo}</p>
                             <p>Category:{fleet.category}</p>
