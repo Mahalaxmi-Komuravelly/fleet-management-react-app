@@ -4,14 +4,24 @@ const Sidebar = () => {
 
     const [formData,setFormData] = useState([]);
     const [regNo,setRegNo] = useState("");
-    const [driverName,setDriverName]= useState("");  
+    const [driverName,setDriverName]= useState(""); 
+    const [category,setCategory] = useState("");
+    const [status,setStatus] = useState("")
     const handleFleetData = (e)=>{
         e.preventDefault();
         const fleet = {
+            id:Date.now(),
             regNo,
             driverName,
-            
+            category,
+            status,
         }
+        formData.push(fleet);
+        console.log(formData);
+        setRegNo("");
+        setCategory("");
+        setDriverName("");
+        setStatus("");
     }
 
   return (
@@ -19,7 +29,7 @@ const Sidebar = () => {
        <h2>Add Fleet</h2>
         <form>
             <input type="text" placeholder='Vehicle Registration number' value={regNo} onChange={(e)=>setRegNo(e.target.value)} />
-            <select value={value} onChange={(e)=>setCategory(e.target.value)}>
+            <select value={category} onChange={(e)=>setCategory(e.target.value)}>
                 <option value="">Select Category</option>
                 <option value="Auto">Auto</option>
                 <option value="Car">Car</option>
@@ -27,7 +37,7 @@ const Sidebar = () => {
                 <option value="Bus">Bus</option>
             </select>
             <input type="text" placeholder='Driver name' value={driverName} onChange={(e)=>setDriverName(e.target.value)}/>
-            <select>
+            <select value={status} onChange={(e)=>setStatus(e.target.value)}>
                 <option value="">Availability Status</option>
                 <option value="Available">Available</option>
                 <option value="Unavailable">Unavailable</option>
