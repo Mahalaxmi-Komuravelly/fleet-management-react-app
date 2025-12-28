@@ -26,6 +26,7 @@ input,button,select{
 .container{
   display: grid;
   width: 80%;
+  grid-template-columns: repeat(3,1fr);
 }
 button{
   border: none;

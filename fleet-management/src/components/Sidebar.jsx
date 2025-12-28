@@ -44,7 +44,7 @@ const Sidebar = () => {
             </select>
             <button type='submit' onClick={handleFleetData}>Add Fleet</button>
         </form>
-
+    
     </div>
   )
 }
